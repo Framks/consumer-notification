@@ -37,7 +37,7 @@ pipeline {
 	}
 	stage('Docker Build') {
 	    steps {
-	        sh "docker build -t ${LOCAL_REGISTRY}/${IMAGE_NAME}:${VERSION} .""
+	        sh "docker build -t ${LOCAL_REGISTRY}/${IMAGE_NAME}:${VERSION} ."
 	    }
 	}
 	stage('Docker Push') {
