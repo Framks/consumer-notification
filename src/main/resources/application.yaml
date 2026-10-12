@@ -2,7 +2,7 @@ spring:
   application:
     name: consumer-notification
   rabbitmq:
-    host: rabbitmq
+    host: rabbitmq.broker # nome curto só resolve dentro do mesmo namespace; entre namespaces precisa de <service>.<namespace>
     port: 5672
     username: notification
     password: notification
@@ -10,3 +10,5 @@ spring:
       simple:
         default-requeue-rejected: false
 
+notification:
+  max-retries: 3
